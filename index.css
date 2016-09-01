@@ -14,6 +14,7 @@
 	font-size: 68pt;
 	font-family: 'Sacramento', cursive;
 	font-weight: 100;
+	text-align: center;
 }
 
 .second-header {
@@ -26,8 +27,30 @@
 
 
 /* Mobile */
-@media only screen and (max-width : 768px) {
-	.parallax.secondary {
+@media only screen and (max-width : 417px) {
+	.main-header {
+		font-size: 52px;
+	}
+	.second-header {
+		font-size: 42px;
+	}
+	.parallax {
 		left: 40%;
+	}
+	.parallax img {
+	}
+	.parallax.secondary {
+		left: 50%;
+	}
+	.parallax.secondary img {
+	}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.parallax {
+		left: 20%;
+	}
+	.parallax.secondary {
+		left: 30%;
 	}
 }
