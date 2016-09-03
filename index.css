@@ -15,6 +15,7 @@
 	font-family: 'Sacramento', cursive;
 	font-weight: 100;
 	text-align: center;
+	color: #666;
 }
 
 .second-header {
@@ -23,6 +24,46 @@
 	font-family: 'Sacramento', cursive;
 	font-weight: 100;
 	text-align: center;
+}
+
+
+/* Tabs */
+
+.tabs {
+	width: 40%;
+	flex-wrap: wrap;
+	height: auto;
+}
+
+.tabs .indicator {
+	background-color: #ddd;
+}
+
+.tabs .tab-item {
+	width: 10%;
+}
+
+.tabs .tab-item a {
+	color: #aaa;
+	/*font-family: 'Poiret One', cursive;*/
+	/*font-family: 'Dancing Script', cursive;*/
+	font-family: 'Josefin Sans', sans-serif;
+}
+.tabs .divider {
+	height: 1px;
+	width: 100%;
+	background-color: black;
+}
+
+.tabs .tab-list {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	background-color: white;
+}
+
+.tab-list .tab-item {
+	padding: 10px;
 }
 
 
@@ -43,6 +84,9 @@
 		left: 50%;
 	}
 	.parallax.secondary img {
+	}
+	.indicator {
+		display: none;
 	}
 }
 
