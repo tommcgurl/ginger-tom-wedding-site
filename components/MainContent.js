@@ -5,8 +5,10 @@ const BRIDAL_PARTY = 'BRIDALPARTY';
 const REGISTRY = 'REGISTRY';
 
 export default class Content {
-  constructor(selector, currentTab) {
+  constructor(selector, topImageSelector, bottomImageSelector,currentTab) {
     this.selector = selector;
+    this.topImageSelector = topImageSelector;
+    this.bottomImageSelector =bottomImageSelector;
     this.currentTab = currentTab;
   }
 
@@ -25,25 +27,38 @@ export default class Content {
 
   getContent() {
     let mainContent;
+    let topImageSource;
+    let bottomImageSource;
+
     switch(this.currentTab) {
       case HOME:
-        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`;
+        topImageSource = "images/main1.jpg";
+        bottomImageSource = "images/main3.jpg";
         break;
       case PHOTOS:
-        mainContent = `<h1 class="second-header">PHOTOS</h1>`
+        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        topImageSource = "images/main1.jpg";
+        bottomImageSource = "images/main3.jpg";
         break;
       case LOCATION:
-        mainContent = `<h1 class="second-header">LOCATION</h1>`
+        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        topImageSource = "images/mpinn.jpg";
+        bottomImageSource = "images/main3.jpg";
         break;
       case BRIDAL_PARTY:
-        mainContent = `<h1 class="second-header">BRIDAL_PARTY</h1>`
+        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        topImageSource = "images/main1.jpg";
+        bottomImageSource = "images/main3.jpg";
         break;
       case REGISTRY:
-        mainContent = `<h1 class="second-header">REGISTRY</h1>`
+        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        topImageSource = "images/main1.jpg";
+        bottomImageSource = "images/main3.jpg";
         break;
     }
 
-    return (
+    mainContent = (
       `
       <div class="section white">
         <div class="row container">
@@ -54,9 +69,24 @@ export default class Content {
       </div>
       `
     );
+
+    return {
+      mainContent,
+      topImageSource,
+      bottomImageSource
+    };
   }
 
   render() {
-    document.getElementById(this.selector).innerHTML = this.getContent();
+    const {
+      mainContent,
+      topImageSource,
+      bottomImageSource
+    } = this.getContent();
+    document.getElementById(this.selector).innerHTML = mainContent;
+    document.getElementById(this.topImageSelector).src = topImageSource;
+    document.getElementById(this.bottomImageSelector).src = bottomImageSource;
+    // Re-start parallax
+    $('.parallax').parallax();
   }
 }
