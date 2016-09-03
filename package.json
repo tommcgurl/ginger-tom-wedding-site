@@ -1,0 +1,28 @@
+{
+  "name": "ginger-and-tom-wedding-site",
+  "version": "1.0.0",
+  "description": "Wedding site for Ginger and Tom",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommcgurl/ginger-tom-wedding-site.git"
+  },
+  "author": "tommcugrl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommcgurl/ginger-tom-wedding-site/issues"
+  },
+  "homepage": "https://github.com/tommcgurl/ginger-tom-wedding-site#readme"
+}
