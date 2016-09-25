@@ -13,9 +13,9 @@ const bootStrapApp = () => {
     const innerText = tabs[i].innerText.replace(/\W/g, '');
     if (innerText === currentTab) {
       // Grab the 'a' tag under the 'li' tag
-      tabs[i].children[0].classList = ['active'];
+      tabs[i].children[0].classList.add('active');
     } else {
-      tabs[i].children[0].classList = [];
+      tabs[i].children[0].classList.remove('active');
     }
   }
 

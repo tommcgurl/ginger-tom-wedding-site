@@ -6,13 +6,7 @@ const setUpStickHeader = (selector, scrollTop) => {
       element.classList.add('fixed')
     } else {
       // remove the last class which would be fixed.
-      let newClassList = [];
-      for (let i = 0; i < element.classList.length; i++ ) {
-        if(element.classList[i] !== 'fixed') {
-          newClassList.push(element.classList[i]);
-        }
-      }
-      element.classList = newClassList;
+      element.classList.remove('fixed');
     }
   })
 };

@@ -92,7 +92,7 @@ export default class Content {
     } = this.getContent();
     let topImageElement = document.getElementById(this.topImageSelector);
     topImageElement.src = topImageSource;
-    topImageElement.classList = [topImageClass];
+    topImageElement.className = topImageClass;
     document.getElementById(this.selector).innerHTML = mainContent;
     document.getElementById(this.topImageSelector).src = topImageSource;
     document.getElementById(this.bottomImageSelector).src = bottomImageSource;
