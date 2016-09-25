@@ -1,4 +1,5 @@
 import MainContent from './components/MainContent';
+import setUpStickHeader from './utils/stickyHeader';
 import Tabs from './components/Tabs';
 
 // Get the initial route
@@ -23,6 +24,8 @@ const bootStrapApp = () => {
 
   // Create event listener on the tabs
   const tabList = document.getElementById('tab-list');
+  const mainContainerHeight = document.getElementById('main-container').getBoundingClientRect().height;
+  setUpStickHeader('.tab-container', mainContainerHeight);
   tabList.addEventListener("click", e => ContentComponent.handleTabChange(e));
 }
 
