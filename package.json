@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Wedding site for Ginger and Tom",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "materialize-css": "^0.97.8"
+  },
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",

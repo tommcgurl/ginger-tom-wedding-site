@@ -1,6 +1,12 @@
 .main-image {
-	width: 1500px;
+	width: 100%;
 	height: auto;
+}
+
+.header-container {
+	position: absolute;
+	width: 100%;
+	background-color: transparent;
 }
 
 .row {
@@ -8,7 +14,7 @@
 }
 
 .location-image {
-	width: 1500px;
+	width: 100%;
 	height: auto;
 	top: -50%;
 }
@@ -22,17 +28,18 @@
 
 .main-header {
 	font-size: 68pt;
-	font-family: 'Sacramento', cursive;
+	font-family: 'Clicker Script';
 	font-weight: 100;
 	text-align: center;
-	color: #666;
+	color: #333;
 	transform: translateZ(0);
 	-webkit-transform: translateZ(0);
 }
 
 .fixed-main-header {
-	font-family: 'Sacramento', cursive;
+	font-family: 'Clicker Script';
 	opacity: 0;
+	height: 0;
 	padding: 0 0;
 	font-weight: 100;
 	text-align: center;
@@ -44,24 +51,17 @@
 }
 
 .fixed .fixed-main-header {
+	height: auto;
 	opacity: 1;
 	font-size: 32px;
-}
-.second-header {
-	color: #e47777;
-	font-size: 42pt;
-	font-family: 'Sacramento', cursive;
-	font-weight: 100;
-	text-align: center;
 }
 
 
 /* Tabs */
 
 .tab-container  {
-	padding:20px 40px;
-	background-color: #fff;
-	position: absolute;
+	padding:0 40px;
+	background-color: transparent;
 	width: 100%;
 	z-index: 1;
 	transform: translateZ(0);
@@ -77,9 +77,11 @@
 }
 
 .tabs {
-	width: 40%;
+	display: flex;
+	max-width: 70%;
 	flex-wrap: wrap;
 	height: auto;
+	background-color: transparent;
 }
 
 .tabs .indicator {
@@ -87,16 +89,20 @@
 }
 
 .tabs .tab-item {
-	width: 10%;
+	width: 5%;
 	-webkit-flex: 1 0 auto;
 }
 
 .tabs .tab-item a {
-	color: #aaa;
-	/*font-family: 'Poiret One', cursive;*/
-	/*font-family: 'Dancing Script', cursive;*/
-	font-family: 'Josefin Sans', sans-serif;
+	color: #9C9C9C;
+	font-size: 12px;
+	font-family: 'Avenir Next', sans-serif;
 }
+
+.tabs .tab-item a.active {
+	color: #9C9C9C;
+}
+
 .tabs .divider {
 	height: 1px;
 	width: 100%;
@@ -112,6 +118,36 @@
 
 .tab-list .tab-item {
 	padding: 10px;
+}
+
+/* Home */
+.home-container {
+	padding-top: 4%;
+	position: relative;
+}
+
+/* Content */
+.header-with-decoration {
+	display: flex;
+	align-items: center;
+}
+.line-decoration {
+	flex: 1;
+	background-color: #333;
+	height: 1px;
+	margin: 0 20px;
+}
+.secondary-header {
+	background: #fff;
+	font-size: 36pt;
+	font-family: 'Clicker Script';
+	font-weight: 100;
+	text-align: center;
+}
+.section-paragraph {
+	font-family: 'Avenir Next';
+	text-align: center;
+	padding: 0 10%;
 }
 
 
@@ -137,25 +173,12 @@
 	.fixed .fixed-main-header {
 		font-size: 16px;
 	}
-	.second-header {
-		font-size: 42px;
-	}
-	.parallax {
-		left: 20%;
-	}
-	.parallax img {
-	}
-	.parallax.secondary {
-		left: 30%;
-	}
-	.parallax.secondary img {
-	}
 	.indicator {
 		display: none;
 	}
 	.main-image {
-		width: 800px;
-		height: auto;
+		min-width: 100%;
+		min-height: 100%;
 	}
 	.location-image {
 		width: 800px;
@@ -165,10 +188,4 @@
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-	.parallax {
-		left: 20%;
-	}
-	.parallax.secondary {
-		left: 30%;
-	}
 }

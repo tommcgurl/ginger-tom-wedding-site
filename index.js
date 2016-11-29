@@ -19,12 +19,12 @@ const bootStrapApp = () => {
     }
   }
 
-  const ContentComponent = new MainContent('content','top-image','bottom-image', currentTab);
+  const ContentComponent = new MainContent('content','top-image', currentTab);
   ContentComponent.render();
 
   // Create event listener on the tabs
   const tabList = document.getElementById('tab-list');
-  const mainContainerHeight = document.getElementById('main-container').getBoundingClientRect().height;
+  const mainContainerHeight = document.getElementById('main-header').getBoundingClientRect().height;
   setUpStickHeader('.tab-container', mainContainerHeight);
   tabList.addEventListener("click", e => ContentComponent.handleTabChange(e));
 }

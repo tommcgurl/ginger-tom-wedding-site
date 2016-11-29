@@ -3,13 +3,14 @@ const PHOTOS = 'PHOTOS';
 const LOCATION = 'LOCATION';
 const BRIDAL_PARTY = 'BRIDALPARTY';
 const REGISTRY = 'REGISTRY';
+import Location from './Location.js';
+import Home from './Home.js';
 
 export default class Content {
-  constructor(selector, topImageSelector, bottomImageSelector,currentTab) {
+  constructor(selector, topImageSelector, currentTab) {
     this.selector = selector;
     this.topImageSelector = topImageSelector;
-    this.bottomImageSelector =bottomImageSelector;
-    this.currentTab = currentTab;
+    this.currentTab = currentTab || HOME;
   }
 
   changeHashHistory() {
@@ -28,38 +29,40 @@ export default class Content {
   getContent() {
     let mainContent;
     let topImageSource;
-    let bottomImageSource;
     let topImageClass;
+    let LocationComponent;
+    let HomeComponent;
     switch(this.currentTab) {
       case HOME:
-        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`;
+        if (!HomeComponent) {
+          HomeComponent = new Home();
+        }
+        mainContent = HomeComponent.getContent();
         topImageSource = "images/main1.jpg";
         topImageClass = "main-image"
-        bottomImageSource = "images/main3.jpg";
         break;
       case PHOTOS:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
         topImageSource = "images/main1.jpg";
         topImageClass = "main-image";
-        bottomImageSource = "images/main3.jpg";
         break;
       case LOCATION:
-        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        if (!LocationComponent) {
+          LocationComponent = new Location();
+        }
+        mainContent = LocationComponent.getContent();
         topImageSource = "images/mpinn.jpg";
         topImageClass = "location-image";
-        bottomImageSource = "images/main3.jpg";
         break;
       case BRIDAL_PARTY:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
         topImageSource = "images/main1.jpg";
         topImageClass = "main-image";
-        bottomImageSource = "images/main3.jpg";
         break;
       case REGISTRY:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
         topImageSource = "images/main1.jpg";
         topImageClass = "main-image";
-        bottomImageSource = "images/main3.jpg";
         break;
     }
 
@@ -78,7 +81,6 @@ export default class Content {
     return {
       mainContent,
       topImageSource,
-      bottomImageSource,
       topImageClass
     };
   }
@@ -87,7 +89,6 @@ export default class Content {
     const {
       mainContent,
       topImageSource,
-      bottomImageSource,
       topImageClass
     } = this.getContent();
     let topImageElement = document.getElementById(this.topImageSelector);
@@ -95,8 +96,5 @@ export default class Content {
     topImageElement.className = topImageClass;
     document.getElementById(this.selector).innerHTML = mainContent;
     document.getElementById(this.topImageSelector).src = topImageSource;
-    document.getElementById(this.bottomImageSelector).src = bottomImageSource;
-    // Re-start parallax
-    $('.parallax').parallax();
   }
 }
