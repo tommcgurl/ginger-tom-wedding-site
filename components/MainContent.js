@@ -74,7 +74,7 @@ export default class Content {
 
     mainContent = (
       `
-      <div class="section white">
+      <div class="content-container white ${mainContainerClass}">
         <div class="row container">
           <div class="centered-col">
             ${mainContent}
@@ -106,6 +106,7 @@ export default class Content {
     // Append to main container class
     let mainContainer = document.getElementById('main-container');
     mainContainer.className = `section header-container ${mainContainerClass}`;
+    document.getElementByTagName('body').className = mainContainerClass;
     // Render the content.
     document.getElementById(this.selector).innerHTML = mainContent;
     document.getElementById(this.topImageSelector).src = topImageSource;
