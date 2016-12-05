@@ -30,6 +30,7 @@ export default class Content {
     let mainContent;
     let topImageSource;
     let topImageClass;
+    let mainContainerClass;
     let LocationComponent;
     let HomeComponent;
     switch(this.currentTab) {
@@ -39,12 +40,14 @@ export default class Content {
         }
         mainContent = HomeComponent.getContent();
         topImageSource = "images/main1.jpg";
-        topImageClass = "main-image"
+        topImageClass = "main-image";
+        mainContainerClass = "home";
         break;
       case PHOTOS:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
         topImageSource = "images/main1.jpg";
         topImageClass = "main-image";
+        mainContainerClass = "photos";
         break;
       case LOCATION:
         if (!LocationComponent) {
@@ -53,16 +56,19 @@ export default class Content {
         mainContent = LocationComponent.getContent();
         topImageSource = "images/mpinn.jpg";
         topImageClass = "location-image";
+        mainContainerClass = "location";
         break;
       case BRIDAL_PARTY:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
         topImageSource = "images/main1.jpg";
         topImageClass = "main-image";
+        mainContainerClass = "bridal-party";
         break;
       case REGISTRY:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
         topImageSource = "images/main1.jpg";
         topImageClass = "main-image";
+        mainContainerClass = "registry";
         break;
     }
 
@@ -81,7 +87,8 @@ export default class Content {
     return {
       mainContent,
       topImageSource,
-      topImageClass
+      topImageClass,
+      mainContainerClass
     };
   }
 
@@ -89,11 +96,17 @@ export default class Content {
     const {
       mainContent,
       topImageSource,
-      topImageClass
+      topImageClass,
+      mainContainerClass
     } = this.getContent();
     let topImageElement = document.getElementById(this.topImageSelector);
     topImageElement.src = topImageSource;
+    // Set Top image class.
     topImageElement.className = topImageClass;
+    // Append to main container class
+    let mainContainer = document.getElementById('main-container');
+    mainContainer.className = `section header-container ${mainContainerClass}`;
+    // Render the content.
     document.getElementById(this.selector).innerHTML = mainContent;
     document.getElementById(this.topImageSelector).src = topImageSource;
   }

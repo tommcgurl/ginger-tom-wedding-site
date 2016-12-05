@@ -7,13 +7,53 @@ export default class Location {
     return (
       `
         <div class="location-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.522100913622!2d-74.07541398460597!3d40.3529462793726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2304a436163f1%3A0xe9ec5a64a1ed6134!2sMolly+Pitcher+Inn!5e0!3m2!1sen!2sus!4v1474855361987"
-            width="600"
-            height="450"
-            frameborder="0"
-            style="border:0"
-            allowfullscreen>
-          </iframe>
+          <div class="location-container-first-row">
+            <div class="location-container-info-group">
+              <h3 class="info-group-heading">
+                Ceremony
+              </h3>
+              <div class="info-group-divider"></div>
+              <h4 class="info-group-location-name">
+                St. James Catholic Church
+              </h4>
+              <p class="info-group-location-address">
+                94 Broad Street,
+                Red Bank New Jersey
+              </p>
+              <div class="grey-button info-group-button">
+                View Map
+              </div>
+            </div>
+            <div class="location-container-info-group">
+              <h3 class="info-group-heading">
+                Reception
+              </h3>
+              <div class="info-group-divider"></div>
+              <h4 class="info-group-location-name">
+                The Molly Pitcher Inn
+              </h4>
+              <p class="info-group-location-address">
+                88 Riverside Avenue,
+                Red Bank New Jersey
+              </p>
+              <div class="grey-button info-group-button">
+                View Map
+              </div>
+            </div>
+          </div>
+          <div class="location-container-second-row">
+            <div class="header-with-decoration">
+              <div class="line-decoration"></div>
+              <div class="info-group-heading secondary-header">
+                Where To Stay
+              </div>
+              <div class="line-decoration"></div>
+
+            </div>
+            <p class="info-group-location-address">
+              We have rooms blocked off for wedding guests at our recption lcation, The Molly Pitcher Inn. Mention the Hall–McGurl wedding when you book your room to get the group discount.
+            </p>
+          </div>
         </div>
       `
     );

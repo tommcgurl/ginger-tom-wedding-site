@@ -16,8 +16,7 @@
 .location-image {
 	width: 100%;
 	height: auto;
-	top: -50%;
-	margin-top: 300px;
+	margin-top: 280px;
 }
 
 .centered-col {
@@ -57,6 +56,21 @@
 	font-size: 32px;
 }
 
+.grey-button {
+	font-family: 'Avenir Next';
+	font-size: 14pt;
+	font-weight: 100;
+	background-color: #C1C0C0;
+	padding: 5px 14px;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+.grey-button:hover {
+	background-color: #9C9C9C;
+}
+
 
 /* Tabs */
 
@@ -75,6 +89,23 @@
 	-webkit-transform: translateZ(0);
 	top: 0;
 	width: 100%;
+	background-color: #fff;
+}
+
+.tab-container.fixed .tabs .indicator {
+	height: 5px;
+	background-color: #949494;
+}
+
+.home .tab-container.fixed .tabs .indicator {
+	height: 1px;
+	background-color: #949494;
+}
+
+
+/* The fixed tabs should be transparent on the home screen */
+.home .tab-container.fixed {
+	background-color: transparent;
 }
 
 .tabs {
@@ -129,6 +160,7 @@
 
 /* Content */
 .header-with-decoration {
+	width: 100%;
 	display: flex;
 	align-items: center;
 }
@@ -149,6 +181,61 @@
 	font-family: 'Avenir Next';
 	text-align: center;
 	padding: 0 10%;
+}
+
+/* Location */
+.location-container-first-row {
+	display: flex;
+	justify-content: space-around;
+}
+
+.location-container-info-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.info-group-heading {
+	font-family: 'Clicker Script';
+	color: #F1ACAB;
+	font-size: 32pt;
+	margin-bottom: 2px;
+}
+
+.info-group-divider {
+	height: 1px;
+	background-color: #F1ACAB;
+	width: 80%;
+}
+
+.info-group-location-name {
+	font-family: 'Clicker Script';
+	font-size: 20pt;
+	text-align: center;
+	margin-bottom: 2px;
+}
+
+.info-group-location-address {
+	font-family: 'Avenir Next';
+	margin-bottom: 32px;
+	padding: 0 20%;
+	text-align: center;
+}
+
+.location-container-second-row {
+	padding-top: 6%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.location-container-second-row .line-decoration {
+	background-color: #F1ACAB;
+}
+
+.info-group-large-heading {
+	font-size: 36pt;
 }
 
 
@@ -181,11 +268,14 @@
 		min-width: 100%;
 		min-height: 100%;
 	}
-	.location-image {
-		width: 800px;
-		height: auto;
-		top: 10%;
+
+	/* location */
+	.location-container-first-row {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
+
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
