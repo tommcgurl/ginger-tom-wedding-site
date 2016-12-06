@@ -17,12 +17,26 @@ export default class Content {
     window.location.hash = `#${this.currentTab.toLowerCase().replace(/\W/g, '')}`;
   }
 
+  setActiveTab() {
+    let tabs = document.getElementsByClassName('tab-item');
+    // We cannot use for each since tabs is not a traditional array
+    for (let i = 0; i < tabs.length; i ++) {
+      const innerText = tabs[i].innerText.replace(/\W/g, '');
+      if (innerText === this.currentTab) {
+        tabs[i].classList.add('active');
+      } else {
+        tabs[i].classList.remove('active');
+      }
+    }
+  }
+
   handleTabChange(e) {
     if (!e.target || !e.target.innerText) {
       return;
     }
     this.currentTab = e.target.innerText.replace(/\W/g, '');
-    this.changeHashHistory()
+    this.changeHashHistory();
+    this.setActiveTab();
     this.render();
   }
 
@@ -106,7 +120,7 @@ export default class Content {
     // Append to main container class
     let mainContainer = document.getElementById('main-container');
     mainContainer.className = `section header-container ${mainContainerClass}`;
-    document.getElementByTagName('body').className = mainContainerClass;
+    document.getElementsByTagName('body')[0].className = mainContainerClass;
     // Render the content.
     document.getElementById(this.selector).innerHTML = mainContent;
     document.getElementById(this.topImageSelector).src = topImageSource;

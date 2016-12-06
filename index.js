@@ -12,10 +12,9 @@ const bootStrapApp = () => {
   for (let i = 0; i < tabs.length; i ++) {
     const innerText = tabs[i].innerText.replace(/\W/g, '');
     if (innerText === currentTab) {
-      // Grab the 'a' tag under the 'li' tag
-      tabs[i].children[0].classList.add('active');
+      tabs[i].classList.add('active');
     } else {
-      tabs[i].children[0].classList.remove('active');
+      tabs[i].classList.remove('active');
     }
   }
 
