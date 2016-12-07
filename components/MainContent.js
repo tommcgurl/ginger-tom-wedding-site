@@ -17,9 +17,11 @@ export default class Content {
     window.location.hash = `#${this.currentTab.toLowerCase().replace(/\W/g, '')}`;
   }
 
+  // Adds the "active" class to the current tab.
   setActiveTab() {
     let tabs = document.getElementsByClassName('tab-item');
-    // We cannot use for each since tabs is not a traditional array
+    // We cannot use for each since tabs is not a traditional array.
+    // It does not have a forEach/Map
     for (let i = 0; i < tabs.length; i ++) {
       const innerText = tabs[i].innerText.replace(/\W/g, '');
       if (innerText === this.currentTab) {
@@ -49,6 +51,7 @@ export default class Content {
     let HomeComponent;
     switch(this.currentTab) {
       case HOME:
+        // Create the component if we haven't already.
         if (!HomeComponent) {
           HomeComponent = new Home();
         }
@@ -64,6 +67,7 @@ export default class Content {
         mainContainerClass = "photos";
         break;
       case LOCATION:
+        // Create the component if we haven't already.
         if (!LocationComponent) {
           LocationComponent = new Location();
         }
