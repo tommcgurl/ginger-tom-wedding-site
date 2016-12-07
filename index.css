@@ -116,9 +116,11 @@ ul {
 
 
 /* The fixed tabs should be transparent on the home screen */
+
 .home .tab-container.fixed {
-	background-color: transparent;
+	background-color: RGBA(235, 236, 238, 0.8);
 }
+
 
 .tabs {
 	display: flex;
@@ -210,6 +212,7 @@ ul {
 
 .info-group-heading {
 	font-family: 'Clicker Script';
+	font-weight: 100;
 	color: #F1ACAB;
 	font-size: 32pt;
 	margin-bottom: 2px;
@@ -223,6 +226,7 @@ ul {
 
 .info-group-location-name {
 	font-family: 'Clicker Script';
+	font-weight: 100;
 	font-size: 20pt;
 	text-align: center;
 	margin-bottom: 2px;
@@ -275,6 +279,7 @@ ul {
 	.content-container.home {
 		position: absolute;
 		top: 100%;
+		background-color: #fff;
 	}
 
 	.main-image {
@@ -320,6 +325,10 @@ ul {
 		flex-direction: column;
 		-webkit-flex-direction: column;
 		justify-content: space-around;
+	}
+
+	.location-image {
+    margin-top: 55%;
 	}
 
 }
