@@ -119,8 +119,6 @@ export default class Content {
     } = this.getContent();
     let topImageElement = document.getElementById(this.topImageSelector);
     topImageElement.src = topImageSource;
-    // Set Top image class.
-    topImageElement.className = topImageClass;
     // Append to main container class
     let mainContainer = document.getElementById('main-container');
     mainContainer.className = `section header-container ${mainContainerClass}`;
@@ -128,5 +126,7 @@ export default class Content {
     // Render the content.
     document.getElementById(this.selector).innerHTML = mainContent;
     document.getElementById(this.topImageSelector).src = topImageSource;
+    // Set Top image class.
+    topImageElement.className = topImageClass;
   }
 }
