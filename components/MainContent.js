@@ -44,48 +44,45 @@ export default class Content {
 
   getContent() {
     let mainContent;
-    let topImageSource;
-    let topImageClass;
+    let imageContent;
     let mainContainerClass;
     let LocationComponent;
     let HomeComponent;
     switch(this.currentTab) {
-      case HOME:
+      case HOME: {
+        debugger;
         // Create the component if we haven't already.
         if (!HomeComponent) {
           HomeComponent = new Home();
         }
-        mainContent = HomeComponent.getContent();
-        topImageSource = "images/main1.jpg";
-        topImageClass = "main-image";
+        let contentObj = HomeComponent.getContent()
+        mainContent = contentObj.main;
+        imageContent = contentObj.image;
         mainContainerClass = "home";
-        break;
+        break
+      }
       case PHOTOS:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
-        topImageSource = "images/main1.jpg";
-        topImageClass = "main-image";
         mainContainerClass = "photos";
         break;
-      case LOCATION:
+      case LOCATION: {
         // Create the component if we haven't already.
         if (!LocationComponent) {
           LocationComponent = new Location();
         }
-        mainContent = LocationComponent.getContent();
-        topImageSource = "images/mpinn.jpg";
-        topImageClass = "location-image";
+        let contentObj = LocationComponent.getContent();
+        debugger;
+        mainContent = contentObj.main;
+        imageContent = contentObj.image;
         mainContainerClass = "location";
         break;
+      }
       case BRIDAL_PARTY:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
-        topImageSource = "images/main1.jpg";
-        topImageClass = "main-image";
         mainContainerClass = "bridal-party";
         break;
       case REGISTRY:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
-        topImageSource = "images/main1.jpg";
-        topImageClass = "main-image";
         mainContainerClass = "registry";
         break;
     }
@@ -103,30 +100,25 @@ export default class Content {
     );
 
     return {
+      imageContent,
       mainContent,
-      topImageSource,
-      topImageClass,
       mainContainerClass
     };
   }
 
   render() {
     const {
+      imageContent,
       mainContent,
-      topImageSource,
-      topImageClass,
       mainContainerClass
     } = this.getContent();
-    let topImageElement = document.getElementById(this.topImageSelector);
-    topImageElement.src = topImageSource;
+    debugger;
     // Append to main container class
     let mainContainer = document.getElementById('main-container');
     mainContainer.className = `section header-container ${mainContainerClass}`;
     document.getElementsByTagName('body')[0].className = mainContainerClass;
     // Render the content.
     document.getElementById(this.selector).innerHTML = mainContent;
-    document.getElementById(this.topImageSelector).src = topImageSource;
-    // Set Top image class.
-    topImageElement.className = topImageClass;
+    document.getElementById(this.topImageSelector).innerHTML = imageContent;
   }
 }
