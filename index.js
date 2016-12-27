@@ -18,7 +18,7 @@ const bootStrapApp = () => {
     }
   }
 
-  const ContentComponent = new MainContent('content','top-image', currentTab);
+  const ContentComponent = new MainContent('content','top-image-container', currentTab);
   ContentComponent.render();
 
   // Create event listener on the tabs
