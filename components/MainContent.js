@@ -64,11 +64,11 @@ export default class Content {
         mainContainerClass = "home";
         break
       }
-      case PHOTOS:
-        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
-        imageContent = `<span></span>`;
-        mainContainerClass = "photos";
-        break;
+      // case PHOTOS:
+      //   mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+      //   imageContent = `<span></span>`;
+      //   mainContainerClass = "photos";
+      //   break;
       case LOCATION: {
         // Create the component if we haven't already.
         if (!this.locationComponent) {
@@ -80,10 +80,11 @@ export default class Content {
         mainContainerClass = "location";
         break;
       }
-      case BRIDAL_PARTY:
-        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
-        mainContainerClass = "bridal-party";
-        break;
+      // case BRIDAL_PARTY:
+      //   mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+      //   imageContent = `<span></span>`
+      //   mainContainerClass = "bridal-party";
+      //   break;
       case REGISTRY:
         // Creat the registry component if we haven't already.
         if (!this.registryComponent) {
@@ -94,6 +95,18 @@ export default class Content {
         imageContent = contentObj.image;
         mainContainerClass = "registry";
         break;
+      default: {
+        // Create the component if we haven't already.
+        // We only want to create them as needed.
+        if (!this.homeComponent) {
+          this.homeComponent = new Home();
+        }
+        contentObj = this.homeComponent.getContent()
+        mainContent = contentObj.main;
+        imageContent = contentObj.image;
+        mainContainerClass = "home";
+        break;
+      }
     }
 
     mainContent = (
