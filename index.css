@@ -141,6 +141,7 @@ body.home {
 	top: 0;
 	width: 100%;
 	background-color: #fff;
+	box-shadow: 1px 1px 12px -4px;
 }
 
 .tab-container.fixed .tabs .indicator {
@@ -313,9 +314,19 @@ body.location, body.registry {
 
 
 /* registry */
-.registry-container{
+
+.registry-container-row {
+	width: 80%;
+	padding-top: 5%;
+}
+
+.registry-container-row .line-decoration{
+	background-color: #F1ACAB;
+}
+
+.registry-vendors-container{
 	width: 100%;
-	height: 500px;
+	height: 600px;
 	display: flex;
 	display: -webkit-flex;
 	justify-content: space-around;
@@ -414,6 +425,10 @@ body.location, body.registry {
 	}
 
 	/* registry */
+
+	.registy-container-row {
+		width: 100%;
+	}
 	.registry #top-image-container {
 		width: 100%;
 		height: 25%;
@@ -425,11 +440,14 @@ body.location, body.registry {
 		padding: 5%;
 	}
 
-	.registry-container{
-		height: 300px;
+	.registry-vendors-container {
 		width: 100%;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
+	}
+
+	.brand-logo {
+		padding: 0;
 	}
 
 	.brand-logo img {
@@ -444,8 +462,13 @@ body.location, body.registry {
 
 }
 
-@media only screen and (max-width : 744px) and (min-width : 413px){
+@media only screen and (max-width : 768px) and (min-width : 413px){
 	/* registry */
+	.brand-logo img {
+		height: 70px;
+		width: auto;
+		padding-bottom: 5%;
+	}
 
 	.registry #top-image-container {
 		width: 100%;
