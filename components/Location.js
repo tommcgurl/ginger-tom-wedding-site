@@ -62,7 +62,7 @@ export default class Location {
         `
       ),
       image: (
-        '<div class="location-image"></div>'
+        '<div class="banner-image location-image"></div>'
       )
     };
   }
