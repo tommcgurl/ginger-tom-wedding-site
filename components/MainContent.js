@@ -5,12 +5,16 @@ const BRIDAL_PARTY = 'BRIDALPARTY';
 const REGISTRY = 'REGISTRY';
 import Location from './Location.js';
 import Home from './Home.js';
+import Registry from './Registry.js';
 
 export default class Content {
   constructor(selector, topImageSelector, currentTab) {
     this.selector = selector;
     this.topImageSelector = topImageSelector;
     this.currentTab = currentTab || HOME;
+    this.homeComponent = '';
+    this.locationComponent = '';
+    this.registryComponent = '';
   }
 
   changeHashHistory() {
@@ -46,16 +50,15 @@ export default class Content {
     let mainContent;
     let imageContent;
     let mainContainerClass;
-    let LocationComponent;
-    let HomeComponent;
+    let contentObj;
     switch(this.currentTab) {
       case HOME: {
-        debugger;
         // Create the component if we haven't already.
-        if (!HomeComponent) {
-          HomeComponent = new Home();
+        // We only want to create them as needed.
+        if (!this.homeComponent) {
+          this.homeComponent = new Home();
         }
-        let contentObj = HomeComponent.getContent()
+        contentObj = this.homeComponent.getContent()
         mainContent = contentObj.main;
         imageContent = contentObj.image;
         mainContainerClass = "home";
@@ -63,15 +66,15 @@ export default class Content {
       }
       case PHOTOS:
         mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        imageContent = `<span></span>`;
         mainContainerClass = "photos";
         break;
       case LOCATION: {
         // Create the component if we haven't already.
-        if (!LocationComponent) {
-          LocationComponent = new Location();
+        if (!this.locationComponent) {
+          this.locationComponent = new Location();
         }
-        let contentObj = LocationComponent.getContent();
-        debugger;
+        contentObj = this.locationComponent.getContent();
         mainContent = contentObj.main;
         imageContent = contentObj.image;
         mainContainerClass = "location";
@@ -82,7 +85,13 @@ export default class Content {
         mainContainerClass = "bridal-party";
         break;
       case REGISTRY:
-        mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
+        // Creat the registry component if we haven't already.
+        if (!this.registryComponent) {
+          this.registryComponent = new Registry();
+        }
+        contentObj = this.registryComponent.getContent();
+        mainContent = contentObj.main;
+        imageContent = contentObj.image;
         mainContainerClass = "registry";
         break;
     }
@@ -112,7 +121,7 @@ export default class Content {
       mainContent,
       mainContainerClass
     } = this.getContent();
-    debugger;
+
     // Append to main container class
     let mainContainer = document.getElementById('main-container');
     mainContainer.className = `section header-container ${mainContainerClass}`;
