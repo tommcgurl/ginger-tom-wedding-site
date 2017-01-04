@@ -22,7 +22,7 @@ export default class Location {
                   Red Bank New Jersey
                 </p>
                 <div class="grey-button info-group-button">
-                  <a target='_blank' href="https://goo.gl/maps/bN7NdJji4jt">View Map</a>
+                  <a target="_blank" href="https://goo.gl/maps/bN7NdJji4jt">View Map</a>
                 </div>
               </div>
               <div class="location-container-info-group">
@@ -38,7 +38,7 @@ export default class Location {
                   Red Bank New Jersey
                 </p>
                 <div class="grey-button info-group-button">
-                  <a target='_blank' href="https://goo.gl/maps/BkWWLtTGfMN2">View Map</a>
+                  <a target="_blank" href="https://goo.gl/maps/BkWWLtTGfMN2">View Map</a>
                 </div>
               </div>
             </div>
@@ -52,10 +52,10 @@ export default class Location {
 
               </div>
               <p class="info-group-location-address">
-                We have rooms blocked off for wedding guests at our recption lcation, The Molly Pitcher Inn. Mention the Hall–McGurl wedding when you book your room to get the group discount.
+                We have rooms blocked off for wedding guests at our reception location, The Molly Pitcher Inn. Mention the Hall–McGurl wedding when you book your room to get the group discount.
               </p>
               <div class="grey-button info-group-button">
-                View Site
+                <a target="_blank" href="http://themollypitcher.com/contact-us/">View Site</a>
               </div>
             </div>
           </div>
