@@ -106,11 +106,11 @@ body.home {
 }
 
 .grey-button {
-	font-family: 'Avenir Next';
+	font-family: 'Muli';
 	font-size: 14pt;
 	font-weight: 100;
 	background-color: #C1C0C0;
-	padding: 5px 14px;
+	padding: 12px 14px;
 	color: #fff;
 	cursor: pointer;
 	transition: 0.25s;
@@ -188,7 +188,7 @@ body.home {
 	cursor: pointer;
 	color: #9C9C9C;
 	font-size: 12px;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 
 .tabs .tab-item.active {
@@ -206,6 +206,20 @@ body.home {
 .home-container {
 	padding: 4% 4%;
 	position: relative;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+.story-image {
+	flex: 1;
+	-webkit-flex: 1 0 auto;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	width: 100%;
+	height: auto;
 }
 
 /* Content */
@@ -231,7 +245,7 @@ body.home {
 	text-align: center;
 }
 .section-paragraph {
-	font-family: 'Avenir Next';
+	font-family: 'Muli';
 	text-align: center;
 	padding: 0 10%;
 }
@@ -294,7 +308,7 @@ body.location, body.registry {
 }
 
 .info-group-location-address {
-	font-family: 'Avenir Next';
+	font-family: 'Muli';
 	margin-bottom: 32px;
 	padding: 0 20%;
 	text-align: center;
@@ -360,6 +374,20 @@ body.location, body.registry {
 .brand-logo img{
 	height: 120px;
 	width: auto;
+}
+
+/* RSVP */
+.rsvp #top-image-container {
+	height: 30%;
+}
+
+.rsvp-container {
+	width: 100%;
+}
+
+#rsvp-frame {
+	width: 100%;
+	height: 500px;
 }
 
 

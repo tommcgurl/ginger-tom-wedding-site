@@ -1,6 +1,5 @@
 import MainContent from './components/MainContent';
 import setUpStickHeader from './utils/stickyHeader';
-import Tabs from './components/Tabs';
 
 // Get the initial route
 const bootStrapApp = () => {

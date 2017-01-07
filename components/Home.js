@@ -16,11 +16,16 @@ export default class Location {
                     <div class="line-decoration"></div>
                   </div>
                   <p class="section-paragraph">
-                    This is just some example placeholder text for now.
-                    It doesn't mean anything it's just used for the purpose of filling space.
-                    Eventually I will put real text here but for now this helps to see what things will look like.
-                    The final paragraph will contain infromation about the Bride and the Groom.
+                    Ginger and Tom are high school sweethearts who are finally tying the knot this summer!
+                    After graduating high school, Ginger and Tom went on to attend college together at Rutgers
+                    University. Ginger is now a 3rd grade elementary school teacher and Thomas works in Manhattan
+                    as a software engineer. They live together with their long-haired mini dachshund Andie in
+                    Red Bank, New Jersey. They are super excited to be getting married this June and look forward
+                    to seeing you there!
                   </p>
+                  <div class="story-image">
+                    <img src="../images/story-image.png"/>
+                  </div>
                 </div>
               `
       ),
