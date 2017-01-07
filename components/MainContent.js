@@ -3,9 +3,11 @@ const PHOTOS = 'PHOTOS';
 const LOCATION = 'LOCATION';
 const BRIDAL_PARTY = 'BRIDALPARTY';
 const REGISTRY = 'REGISTRY';
+const RSVP = 'RSVP';
 import Location from './Location.js';
 import Home from './Home.js';
 import Registry from './Registry.js';
+import Rsvp from './Rsvp.js';
 
 export default class Content {
   constructor(selector, topImageSelector, currentTab) {
@@ -15,6 +17,7 @@ export default class Content {
     this.homeComponent = '';
     this.locationComponent = '';
     this.registryComponent = '';
+    this.rsvpComponent = '';
   }
 
   changeHashHistory() {
@@ -95,6 +98,16 @@ export default class Content {
         imageContent = contentObj.image;
         mainContainerClass = "registry";
         break;
+      case RSVP: {
+        if (!this.rsvpComponent) {
+          this.rsvpComponent = new Rsvp();
+        }
+        contentObj = this.rsvpComponent.getContent();
+        mainContent = contentObj.main;
+        imageContent = contentObj.image;
+        mainContainerClass = "rsvp";
+        break;
+      }
       default: {
         // Create the component if we haven't already.
         // We only want to create them as needed.
