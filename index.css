@@ -456,6 +456,10 @@ body.location, body.registry {
 		font-size: 52px;
 	}
 
+	.info-group-divider {
+		width: 40%;
+	}
+
 	.fixed .fixed-main-header {
 		font-size: 16px;
 	}
