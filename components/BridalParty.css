@@ -1,0 +1,20 @@
+.bridal-party-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  align-items: center;
+  -webkit-align-items: center;
+  padding: 0 5% 20% 5%;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+
+/* Using Columns */
+/*.bridal-party-container {
+  padding: 0 10% 20% 10%;
+  columns: 3 240px;
+  -webkit-columns: 3 240px;
+  -moz-columns: 3 340px;
+}*/

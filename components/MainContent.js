@@ -8,6 +8,7 @@ import Location from './Location.js';
 import Home from './Home.js';
 import Registry from './Registry.js';
 import Rsvp from './Rsvp.js';
+import BridalParty from './BridalParty.js';
 
 export default class Content {
   constructor(selector, topImageSelector, currentTab) {
@@ -18,6 +19,7 @@ export default class Content {
     this.locationComponent = '';
     this.registryComponent = '';
     this.rsvpComponent = '';
+    this.bridalPartyComponent = '';
   }
 
   changeHashHistory() {
@@ -47,6 +49,7 @@ export default class Content {
     this.changeHashHistory();
     this.setActiveTab();
     this.render();
+    window.scrollTo(0,0);
   }
 
   getContent() {
@@ -67,11 +70,6 @@ export default class Content {
         mainContainerClass = "home";
         break
       }
-      // case PHOTOS:
-      //   mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
-      //   imageContent = `<span></span>`;
-      //   mainContainerClass = "photos";
-      //   break;
       case LOCATION: {
         // Create the component if we haven't already.
         if (!this.locationComponent) {
@@ -83,11 +81,6 @@ export default class Content {
         mainContainerClass = "location";
         break;
       }
-      // case BRIDAL_PARTY:
-      //   mainContent = `<h1 class="second-header">Website coming soon    :)</h1>`
-      //   imageContent = `<span></span>`
-      //   mainContainerClass = "bridal-party";
-      //   break;
       case REGISTRY:
         // Creat the registry component if we haven't already.
         if (!this.registryComponent) {
@@ -103,6 +96,16 @@ export default class Content {
           this.rsvpComponent = new Rsvp();
         }
         contentObj = this.rsvpComponent.getContent();
+        mainContent = contentObj.main;
+        imageContent = contentObj.image;
+        mainContainerClass = "rsvp";
+        break;
+      }
+      case BRIDAL_PARTY: {
+        if (!this.bridalPartyComponent) {
+          this.bridalPartyComponent= new BridalParty();
+        }
+        contentObj = this.bridalPartyComponent.getContent();
         mainContent = contentObj.main;
         imageContent = contentObj.image;
         mainContainerClass = "rsvp";
