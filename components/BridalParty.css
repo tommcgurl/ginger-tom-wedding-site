@@ -1,3 +1,7 @@
+.bridal-party-outer-container {
+
+}
+
 .bridal-party-container {
   display: flex;
   display: -webkit-flex;
@@ -5,11 +9,34 @@
   -webkit-flex-wrap: wrap;
   align-items: center;
   -webkit-align-items: center;
-  padding: 0 5% 20% 5%;
+  padding: 0 5% 5% 5%;
   justify-content: center;
   -webkit-justify-content: center;
 }
 
+.bridal-party-outer-container .header-with-decoration {
+  justify-content: center;
+  -webkit-justify-content: center;
+  margin-bottom: 2%;
+}
+
+.brides-maids.header-with-decoration {
+  color: #F1ACAB;
+}
+
+.brides-maids.header-with-decoration .line-decoration {
+  background-color: #F1ACAB;
+  max-width: 20%;
+}
+
+.groomsman.header-with-decoration {
+  color: #97b9dc;
+}
+
+.groomsman.header-with-decoration .line-decoration {
+  background-color: #97b9dc;
+  max-width: 20%;
+}
 
 /* Using Columns */
 /*.bridal-party-container {
