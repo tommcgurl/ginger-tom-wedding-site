@@ -1,5 +1,6 @@
-.bridal-party-outer-container {
-
+.bridal-party #top-image-container{
+  max-height: 0;
+  min-height: 30%;
 }
 
 .bridal-party-container {
