@@ -40,11 +40,14 @@ body.home {
 	width: 100%;
 	height: auto;
 }*/
+.home .header-container {
+	background-color: transparent;
+}
 
 .header-container {
 	position: absolute;
 	width: 100%;
-	background-color: transparent;
+	background-color: #FCFCFC;
 }
 
 .row {
@@ -202,8 +205,8 @@ body.home {
 }
 
 .tabs .tab-item.active {
-	color: #9C9C9C;
-	border-bottom: solid 1px #9C9C9C;
+	color: #F0ACAC;
+	border-bottom: solid 1px #F0ACAC;
 }
 
 .tabs .divider {
@@ -273,7 +276,6 @@ body.location, body.registry {
 .location.header-container, .registry.header-container {
 	position: relative;
 	width: 100%;
-	background-color: transparent;
 }
 
 .location-container {
