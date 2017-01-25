@@ -1,0 +1,17 @@
+#arrow {
+  position: absolute;
+  bottom: 100%;
+  /* 108 to account for 4% padding on right and left*/
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  left: 0;
+  /*right: 46%;*/
+  transition: 2s;
+}
+
+#arrow.disabled {
+  opacity: 0;
+}

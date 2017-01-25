@@ -66,7 +66,7 @@ export default class Content {
         if (!this.homeComponent) {
           this.homeComponent = new Home();
         }
-        contentObj = this.homeComponent.getContent()
+        contentObj = this.homeComponent.getContent();
         mainContent = contentObj.main;
         imageContent = contentObj.image;
         mainContainerClass = "home";

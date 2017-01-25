@@ -8,6 +8,13 @@ const setUpStickHeader = (selector, scrollTop) => {
       // remove the last class which would be fixed.
       element.classList.remove('fixed');
     }
+    // Remove arrow if present.
+    const arrow = document.getElementById('arrow');
+    if (arrow && scrollY !== 0) {
+      arrow.classList.add('disabled');
+    } else if (arrow) {
+      arrow.classList.remove('disabled');
+    }
   }
   window.addEventListener('scroll', onScroll)
   // For iOS

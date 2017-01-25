@@ -1,3 +1,5 @@
+import './Home.css';
+
 export default class Location {
   constructor(selector) {
     this.selector = selector;
@@ -8,6 +10,9 @@ export default class Location {
       main: (
               `
                 <div class="home-container">
+                  <div id="arrow">
+                    <img src="../images/triangle.svg" />
+                  </div>
                   <div class="header-with-decoration">
                     <div class="line-decoration"></div>
                     <div class="secondary-header">
