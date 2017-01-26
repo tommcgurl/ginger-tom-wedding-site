@@ -23,7 +23,13 @@ const bootStrapApp = () => {
   // Create event listener on the tabs
   const tabList = document.getElementById('tab-list');
   const mainContainerHeight = document.getElementById('main-header-container').getBoundingClientRect().height;
-  setUpStickHeader('.tab-container', mainContainerHeight);
+  setUpStickHeader(
+    [
+      '.tab-container',
+      '.top-image'
+    ],
+     mainContainerHeight
+  );
   tabList.addEventListener("click", e => ContentComponent.handleTabChange(e));
 }
 

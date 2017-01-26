@@ -1,6 +1,6 @@
 #arrow {
   position: absolute;
-  bottom: 100%;
+  bottom: 102%;
   /* 108 to account for 4% padding on right and left*/
   width: 100%;
   display: flex;

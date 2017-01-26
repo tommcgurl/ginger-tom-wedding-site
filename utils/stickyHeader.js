@@ -1,12 +1,17 @@
-const setUpStickHeader = (selector, scrollTop) => {
-  let element = document.querySelector(selector);
+const setUpStickHeader = (selectors, scrollTop) => {
   const onScroll = (e) => {
     if (window.scrollY > scrollTop || (window.pageYOffset && (window.scrollY > window.pageYOffset))) {
       // Add the class to make it stick
-      element.classList.add('fixed')
+      selectors.forEach(selector => {
+        let element = document.querySelector(selector);
+        element.classList.add('fixed')
+      });
     } else {
       // remove the last class which would be fixed.
-      element.classList.remove('fixed');
+      selectors.forEach(selector => {
+        let element = document.querySelector(selector);
+        element.classList.remove('fixed')
+      });
     }
     // Remove arrow if present.
     const arrow = document.getElementById('arrow');
