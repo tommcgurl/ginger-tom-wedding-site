@@ -52,6 +52,10 @@ export default class Content {
     this.setActiveTab();
     this.render();
     window.scrollTo(0,0);
+    if (ga) {
+      ga('set', 'page', `/${this.currentTab.toLowerCase()}.html`);
+      ga('send', 'pageview');
+    }
   }
 
   getContent() {
