@@ -30,7 +30,7 @@ const BRIDES_MAIDS = [
   {
     name: 'Lindsey Sacks',
     imagePath: '../images/bridal-party/Lindsey.jpg',
-    bio: 'Lindsey was Ginger\'s college roomate. They met at Rutgers University and immediately hit it off. Whenever they are together it\'s gaurenteed to be a good time.'
+    bio: 'Lindsey was Ginger\'s college roomate. They met at Rutgers University and immediately hit it off. When they get together it is guaranteed  to be a fun time filled with 90s music and lots of laughs.'
   }
 ]
 const GROOMSMAN = [

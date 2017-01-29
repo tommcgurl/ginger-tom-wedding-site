@@ -46,3 +46,9 @@
   font-family: 'Muli';
   padding: 0 10px;
 }
+
+@media only screen and (max-width : 320px) {
+  .bridal-party-bio-container {
+    max-width: 300px;
+  }
+}

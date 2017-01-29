@@ -22,7 +22,7 @@ export default class Registry {
                 <div class="brand-logo bbb">
                   <img src="../images/bed-bath-logo.png"/>
                 </div>
-                <div class="grey-button info-group-button">
+                <div onClick="ga('send', 'event', 'Bed Bath And Beyond Registry', 'click');" class="grey-button info-group-button">
                   <a target='_blank' href="https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=543873479&eventType=Wedding&pwsurl=?mcid=EM_triggeredem_emailregistryplural__allpromos">View Registry</a>
                 </div>
               </div>
@@ -30,7 +30,7 @@ export default class Registry {
                 <div class="brand-logo pb">
                   <img src="../images/pottery-barn-logo.png"/>
                 </div>
-                <div class="grey-button info-group-button">
+                <div onClick="ga('send', 'event', 'Pottery Barn Registry', 'click');" class="grey-button info-group-button">
                   <a target='_blank' href="http://www.potterybarn.com/registry/3925810/registry-list.html">View Registry</a>
                 </div>
               </div>
@@ -46,7 +46,7 @@ export default class Registry {
               <div class="honeymoon-description-container">
                 <p class="honeymoon-description">
                   For two weeks following the wedding, Ginger and Tom will be enjoying an amazing Honeymoon in Italy! You can help make this trip even more special.
-                  <div class="grey-button info-group-button">
+                  <div onClick="ga('send', 'event', 'Honeymoon Registry', 'click');" class="grey-button info-group-button">
                     <a target='_blank' href="https://myvacationlady.honeymoonwishes.com/Honeymoon-Registry-331286-Italy-Ginger-Hall-Thomas-McGurl.html">View Registry</a>
                   </div>
                 </p>
