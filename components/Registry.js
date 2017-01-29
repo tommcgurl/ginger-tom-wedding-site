@@ -1,3 +1,5 @@
+import './Registry.css';
+
 export default class Registry {
   constructor(selector) {
     this.selector = selector;
@@ -11,7 +13,7 @@ export default class Registry {
             <div class="header-with-decoration">
               <div class="line-decoration"></div>
               <div class="info-group-heading secondary-header">
-                Where We Are Registered
+                  For our home ...
               </div>
               <div class="line-decoration"></div>
             </div>
@@ -31,6 +33,23 @@ export default class Registry {
                 <div class="grey-button info-group-button">
                   <a target='_blank' href="http://www.potterybarn.com/registry/3925810/registry-list.html">View Registry</a>
                 </div>
+              </div>
+            </div>
+            <div class="honeymoon-container">
+              <div class="header-with-decoration">
+                <div class="line-decoration"></div>
+                <div class="info-group-heading secondary-header">
+                    For our honeymoon
+                </div>
+                <div class="line-decoration"></div>
+              </div>
+              <div class="honeymoon-description-container">
+                <p class="honeymoon-description">
+                  For two weeks following the wedding, Ginger and Tom will be enjoying an amazing Honeymoon in Italy! You can help make this trip even more special.
+                  <div class="grey-button info-group-button">
+                    <a target='_blank' href="https://myvacationlady.honeymoonwishes.com/Honeymoon-Registry-331286-Italy-Ginger-Hall-Thomas-McGurl.html">View Registry</a>
+                  </div>
+                </p>
               </div>
             </div>
           </div>

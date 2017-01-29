@@ -1,0 +1,31 @@
+.honeymoon-container {
+  height: 400px;
+  text-align: center;
+  font-family: 'Muli';
+}
+
+.honeymoon-description-container {
+  padding: 0 20%;
+}
+
+
+@media only screen and (max-width : 320px) {
+}
+
+@media only screen and (max-width : 417px) {
+  .registry-container-row {
+    width: 100%;
+  }
+  .registry-vendors-container {
+    height: 200px;
+  }
+  .registry .info-group-heading {
+    font-size: 24pt;
+  }
+  .registry .line-decoration {
+    min-width: 30px;
+  }
+}
+
+@media only screen and (max-width : 1000px) and (min-width : 418px) {
+}
