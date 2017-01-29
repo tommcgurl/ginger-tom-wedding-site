@@ -5,32 +5,32 @@ const BRIDES_MAIDS = [
   {
     name: 'LanaRose Berger',
     imagePath: '../images/bridal-party/Lana.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
+    bio: 'Ginger and Lana met in third grade and have been best friends ever since. Over the years they\'ve made countless memories and built a life long friendship. Lana is a Co-Maid Of Honor.'
   },
   {
     name: 'Ashley Cutler',
     imagePath: '../images/bridal-party/Ashley.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
+    bio: 'Ginger and Ashley are long time family friends. One of their favorite traditions is watching the Bachelor together on Monday nights. Ashley is also a Co-Maid Of Honor.'
   },
   {
     name: 'Millie Goldberg',
     imagePath: '../images/bridal-party/Millie.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
+    bio: 'Ginger had the pleasure of meeting Millie when she started dating Tom\'s best friend Harry. They have been the best of friends ever since then.'
   },
   {
     name: 'Katie McGurl',
     imagePath: '../images/bridal-party/Katie.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
+    bio: 'Katie is Ginger\'s future sister-in-law. Ginger and Katie were friends from the beginning and Ginger can\'t wait to officially call her a sister.'
   },
   {
     name: 'Erica Patton',
     imagePath: '../images/bridal-party/Erica.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
+    bio: 'Ginger met Erica during her first year at Rutgers University. After spending many nights together at Old Queens, Ginger and Erica quickly became best friends.'
   },
   {
-    name: 'Lindsey Saks',
+    name: 'Lindsey Sacks',
     imagePath: '../images/bridal-party/Lindsey.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
+    bio: 'Lindsey was Ginger\'s college roomate. They met at Rutgers University and immediately hit it off. Whenever they are together it\'s gaurenteed to be a good time.'
   }
 ]
 const GROOMSMAN = [
@@ -78,6 +78,35 @@ export default class BridalParty {
   }
 
   getContent() {
+    // return {
+    //   main:   (
+    //     `
+    //       <div class="bridal-party-outer-container">
+    //         <div class="brides-maids header-with-decoration">
+    //           <div class="line-decoration"></div>
+    //           <div class="secondary-header">
+    //             Brides Maids
+    //           </div>
+    //           <div class="line-decoration"></div>
+    //         </div>
+    //         <div class="bridal-party-container">
+    //           ${this.renderBios(BRIDES_MAIDS)}
+    //         </div>
+    //         <div class="groomsman header-with-decoration">
+    //           <div class="line-decoration"></div>
+    //           <div class="secondary-header">
+    //             Groomsman
+    //           </div>
+    //           <div class="line-decoration"></div>
+    //         </div>
+    //         <div class="bridal-party-container">
+    //           ${this.renderBios(GROOMSMAN)}
+    //         </div>
+    //       </div>
+    //     `
+    //   ),
+    //   image: ''
+    // };
     return {
       main:   (
         `
@@ -92,20 +121,10 @@ export default class BridalParty {
             <div class="bridal-party-container">
               ${this.renderBios(BRIDES_MAIDS)}
             </div>
-            <div class="groomsman header-with-decoration">
-              <div class="line-decoration"></div>
-              <div class="secondary-header">
-                Groomsman
-              </div>
-              <div class="line-decoration"></div>
-            </div>
-            <div class="bridal-party-container">
-              ${this.renderBios(GROOMSMAN)}
-            </div>
           </div>
         `
       ),
       image: ''
-    };
+    }
   }
 }

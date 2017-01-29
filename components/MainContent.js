@@ -103,16 +103,16 @@ export default class Content {
         mainContainerClass = "rsvp";
         break;
       }
-      // case BRIDAL_PARTY: {
-      //   if (!this.bridalPartyComponent) {
-      //     this.bridalPartyComponent= new BridalParty();
-      //   }
-      //   contentObj = this.bridalPartyComponent.getContent();
-      //   mainContent = contentObj.main;
-      //   imageContent = contentObj.image;
-      //   mainContainerClass = "bridal-party";
-      //   break;
-      // }
+      case BRIDAL_PARTY: {
+        if (!this.bridalPartyComponent) {
+          this.bridalPartyComponent= new BridalParty();
+        }
+        contentObj = this.bridalPartyComponent.getContent();
+        mainContent = contentObj.main;
+        imageContent = contentObj.image;
+        mainContainerClass = "bridal-party";
+        break;
+      }
       case PHOTOS: {
         if (!this.photosComponent) {
           this.photosComponent= new Photos();
