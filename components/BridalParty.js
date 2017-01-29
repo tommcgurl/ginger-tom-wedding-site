@@ -3,66 +3,66 @@ import './BridalParty.css';
 
 const BRIDES_MAIDS = [
   {
-    name: 'Lana Berger',
+    name: 'LanaRose Berger',
     imagePath: '../images/bridal-party/Lana.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Ashley Cutler',
     imagePath: '../images/bridal-party/Ashley.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Millie Goldberg',
     imagePath: '../images/bridal-party/Millie.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Katie McGurl',
     imagePath: '../images/bridal-party/Katie.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Erica Patton',
     imagePath: '../images/bridal-party/Erica.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Lindsey Saks',
     imagePath: '../images/bridal-party/Lindsey.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   }
 ]
 const GROOMSMAN = [
   {
     name: 'Jimmy Joe McGurl',
     imagePath: '../images/bridal-party/Lana.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Harry Goldberg',
     imagePath: '../images/bridal-party/Ashley.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Dan Hall',
     imagePath: '../images/bridal-party/Millie.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Todd Messer',
     imagePath: '../images/bridal-party/Katie.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Joe Mattheusen',
     imagePath: '../images/bridal-party/Erica.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   },
   {
     name: 'Matt Clawson',
     imagePath: '../images/bridal-party/Lindsey.jpg',
-    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentances for now.'
+    bio: 'Placeholder text for now. Fill this in with a short bio about the bridal party memeber. Should be about three to four sentences for now.'
   }
 ];
 

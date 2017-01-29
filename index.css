@@ -196,9 +196,8 @@ body.home {
 	text-align: center;
 	flex: 1;
 	max-width: 110px;
-	max-width: 60px;
 	-webkit-flex: 1 0 auto;
-	padding: 10px 5%;
+	padding: 16px 5% 4px 5%;
 	cursor: pointer;
 	color: #9C9C9C;
 	font-size: 12px;
@@ -455,13 +454,16 @@ body.location, body.registry {
 		padding: 0 4%;
 	}
 
+	.fixed .tabs {
+		margin-top: 0;
+	}
+
 	.tabs .tab-item {
 		min-width: 90px;
-		margin: 1% 4%;
+		margin: -1% 4%;
 	}
 
 	.fixed.tab-container {
-		padding-top: 20px;
 		box-shadow: 1px 1px 12px -4px;
 	}
 
