@@ -1,3 +1,5 @@
+import './Rsvp.css';
+
 export default class Rsvp {
   constructor(selector) {
     this.selector = selector;

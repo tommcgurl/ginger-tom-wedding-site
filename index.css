@@ -400,20 +400,6 @@ body.location, body.registry {
 	width: auto;
 }
 
-/* RSVP */
-.rsvp #top-image-container {
-	height: 30%;
-}
-
-.rsvp-container {
-	width: 100%;
-}
-
-#rsvp-frame {
-	width: 100%;
-	height: 500px;
-}
-
 
 /* Mobile */
 @media only screen and (max-width : 417px) {
