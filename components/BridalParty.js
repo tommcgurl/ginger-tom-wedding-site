@@ -107,24 +107,5 @@ export default class BridalParty {
       ),
       image: ''
     };
-  //   return {
-  //     main:   (
-  //       `
-  //         <div class="bridal-party-outer-container">
-  //           <div class="brides-maids header-with-decoration">
-  //             <div class="line-decoration"></div>
-  //             <div class="secondary-header">
-  //               Brides Maids
-  //             </div>
-  //             <div class="line-decoration"></div>
-  //           </div>
-  //           <div class="bridal-party-container">
-  //             ${this.renderBios(BRIDES_MAIDS)}
-  //           </div>
-  //         </div>
-  //       `
-  //     ),
-  //     image: ''
-  //   }
   }
 }
