@@ -28,9 +28,9 @@ const BRIDES_MAIDS = [
     bio: 'Lindsey was Ginger\'s college roomate. They met at Rutgers University and immediately hit it off. When they get together it is guaranteed  to be a fun time filled with 90s music, lots of laughs, and of course drinks.'
   },
   {
-    name: 'Erica Patton',
+    name: 'Erica Paton',
     imagePath: '../images/bridal-party/Erica.jpg',
-    bio: 'Ginger met Erica during her first year at Rutgers University. After spending many nights together at Old Queens, Ginger and Erica quickly became best friends and have been ever since.'
+    bio: 'Ginger met Erica during her first year at Rutgers University. After spending many nights together at Olde Queens, Ginger and Erica quickly became best friends and have been ever since.'
   }
 ]
 const GROOMSMAN = [
