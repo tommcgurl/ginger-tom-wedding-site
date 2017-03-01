@@ -1,10 +1,10 @@
 const HOME = 'HOME';
-const LOCATION = 'LOCATION';
+const DETAILS = 'DETAILS';
 const BRIDAL_PARTY = 'BRIDALPARTY';
 const REGISTRY = 'REGISTRY';
 const RSVP = 'RSVP';
 const PHOTOS= 'PHOTOS';
-import Location from './Location.js';
+import Details from './Details.js';
 import Home from './Home.js';
 import Registry from './Registry.js';
 import Rsvp from './Rsvp.js';
@@ -17,7 +17,7 @@ export default class Content {
     this.topImageSelector = topImageSelector;
     this.currentTab = currentTab || HOME;
     this.homeComponent = '';
-    this.locationComponent = '';
+    this.detailsComponent = '';
     this.registryComponent = '';
     this.rsvpComponent = '';
     this.bridalPartyComponent = '';
@@ -76,12 +76,12 @@ export default class Content {
         mainContainerClass = "home";
         break
       }
-      case LOCATION: {
+      case DETAILS: {
         // Create the component if we haven't already.
-        if (!this.locationComponent) {
-          this.locationComponent = new Location();
+        if (!this.detailsComponent) {
+          this.detailsComponent = new Details();
         }
-        contentObj = this.locationComponent.getContent();
+        contentObj = this.detailsComponent.getContent();
         mainContent = contentObj.main;
         imageContent = contentObj.image;
         mainContainerClass = "location";

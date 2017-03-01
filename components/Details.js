@@ -1,3 +1,5 @@
+import './Details.css';
+
 export default class Location {
   constructor(selector) {
     this.selector = selector;
@@ -8,6 +10,25 @@ export default class Location {
       main: (
         `
           <div class="location-container">
+            <div class="location-container-second-row">
+              <div class="header-with-decoration">
+                <div class="line-decoration"></div>
+                <div class="info-group-heading secondary-header">
+                  The Details
+                </div>
+                <div class="line-decoration"></div>
+
+              </div>
+              <h4 class="date">
+                June 30th, 2017
+              </h4>
+              <p class="info-group-details">
+                The ceremony will begin promptly at  • 4pm •
+              </p>
+              <p class="info-group-details">
+                Cocktail Hour will begin at  • 6:30pm • followed by The Reception.
+              </p>
+            </div>
             <div class="location-container-first-row">
               <div class="location-container-info-group">
                 <h3 class="info-group-heading">

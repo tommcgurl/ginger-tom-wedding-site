@@ -308,6 +308,7 @@ body.location, body.registry {
 	color: #F1ACAB;
 	font-size: 32pt;
 	margin-bottom: 2px;
+	margin-top: 6px;
 }
 
 .info-group-divider {
