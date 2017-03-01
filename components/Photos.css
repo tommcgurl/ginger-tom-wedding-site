@@ -11,8 +11,17 @@
   -webkit-justify-content: center;
   align-items: center;
   -webkit-align-items: center;
+  padding-bottom: 20px;
+}
+
+.photos-container.oldies  {
   padding-bottom: 20%;
 }
+
+.photos-container.oldies .photo.verticle {
+  height: 350px;
+}
+
 
 .photos-container .photo {
   height: 250px;

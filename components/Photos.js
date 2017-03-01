@@ -5,6 +5,19 @@ export default class Photos {
     this.selector = selector;
   }
 
+  getOlides() {
+    // Create a range from 0 -> 40
+    const emptyArray = Array.apply("test", Array(42));
+    const range = emptyArray.map((_, index) => index + 1);
+    return range.reduce((acc, next) => {
+      if (next < 16) {
+        return `${acc}<img class="photo verticle" src="../images/photos/oldies/${next}.jpg" />`
+      } else {
+        return `${acc}<img class="photo" src="../images/photos/oldies/${next}.jpg" />`
+      }
+    },'');
+  }
+
   getContent() {
     return {
       main:   (
@@ -31,6 +44,10 @@ export default class Photos {
             <img class="photo verticle" src="../images/photos/19.jpg" />
             <img class="photo verticle" src="../images/photos/20.jpg" />
           </div>
+          <div class="photos-container oldies">
+            ${this.getOlides()}
+          </div>
+
         `
       ),
       image: ''
