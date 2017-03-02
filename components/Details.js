@@ -26,7 +26,7 @@ export default class Location {
                 The ceremony will begin promptly at  • 4pm •
               </p>
               <p class="info-group-details">
-                Cocktail Hour will begin at  • 6:30pm • followed by The Reception.
+                Cocktail hour will begin at  • 6:30pm • followed by the reception.
               </p>
             </div>
             <div class="location-container-first-row">

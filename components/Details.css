@@ -1,16 +1,16 @@
 .location .location-container .date {
   font-family: 'Clicker Script';
   font-weight: 100;
-  font-size: 36pt;
+  font-size: 32pt;
   text-align: center;
   margin: 10px 0;
   color: #666;
 }
 
 .location .location-container .info-group-details {
-  font-family: 'Clicker Script';
+  font-family: 'Muli';
   font-weight: 100;
-  font-size: 24pt;
+  font-size: 14pt;
   text-align: center;
   margin: 10px 0;
   color: #666;
