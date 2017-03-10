@@ -13,7 +13,7 @@ export default class Registry {
             <div class="header-with-decoration">
               <div class="line-decoration"></div>
               <div class="info-group-heading secondary-header">
-                  For our home ...
+                  For our home
               </div>
               <div class="line-decoration"></div>
             </div>
