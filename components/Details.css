@@ -1,3 +1,11 @@
+.location-container {
+  background-color: #fff;
+}
+
+.location #top-image-container {
+  min-height: 220px;
+}
+
 .location .location-container .date {
   font-family: 'Clicker Script';
   font-weight: 100;
