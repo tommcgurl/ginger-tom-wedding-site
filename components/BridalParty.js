@@ -95,7 +95,7 @@ export default class BridalParty {
             <div class="groomsman header-with-decoration">
               <div class="line-decoration"></div>
               <div class="secondary-header">
-                Groomsman
+                Groomsmen
               </div>
               <div class="line-decoration"></div>
             </div>
