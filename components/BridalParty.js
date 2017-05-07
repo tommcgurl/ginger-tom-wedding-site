@@ -37,7 +37,7 @@ const GROOMSMAN = [
   {
     name: 'Jimmy Joe McGurl',
     imagePath: '../images/bridal-party/JimmyJoe.jpg',
-    bio: 'If you couldn\'t tell by the last name, Jimmmy Joe is Tom\'s older brother. He tought him how to play video games and let him tag along with his friends growing up. Jimmy Joe is a best friend, a brother, and a Co-Best Man.'
+    bio: 'If you couldn\'t tell by the last name, Jimmy Joe is Tom\'s older brother. He tought him how to play video games and let him tag along with his friends growing up. Jimmy Joe is a best friend, a brother, and a Co-Best Man.'
   },
   {
     name: 'Harry Goldberg',
